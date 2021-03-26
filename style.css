@@ -189,6 +189,7 @@ a:hover {
 .product__cards {
   display: flex;
   justify-content: space-between;
+  flex-wrap: wrap;
 }
 
 .card_sm {
@@ -332,7 +333,7 @@ a:hover {
   flex-basis: 570px;
   background-image: url('./images/product_1_lg_66.png');
   background-repeat: no-repeat;
-  background-size: contain;
+  background-size: cover;
   display: flex;
   justify-content: center;
   padding-left: 40px;
@@ -345,11 +346,13 @@ a:hover {
   flex-wrap: wrap;
   justify-content: space-between;
   align-content: space-between;
+  flex-wrap: wrap;
 }
 
 .container_row {
   flex-direction: row;
   justify-content: space-between;
+  flex-wrap: wrap;
 }
 
 .mobile-app {
