@@ -1,6 +1,8 @@
 const sliderDots = document.querySelectorAll('.dot');
 const sliderBottom = document.querySelector('.slider_bottom');
 
+const headerLinks = document.querySelectorAll('.header__link');
+
 const slider = document.querySelector('.slider_header');
 
 const sliderImages = [
@@ -59,6 +61,21 @@ document.addEventListener('click', (e) => {
   }
 })
 
+
+// ------------------------ //
+
+// Scroll to Trending Products //
+
+const productsScreen = document.querySelector('#Trending_products');
+
+headerLinks[1].addEventListener('click', (e) => {
+  e.preventDefault();
+  console.log('sfsdfdsf')
+  productsScreen.scrollIntoView({
+    behavior: 'smooth',
+    block: 'start'
+  })
+})
 
 // ------------------------ //
 
