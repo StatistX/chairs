@@ -59,7 +59,8 @@ searchImg.addEventListener('mouseenter', () => {
 })
 
 document.addEventListener('click', (e) => {
-  if (e.target.className !== 'search-input') {
+  if (e.target.className !== 'search-input' &&
+      e.target.className !== 'search_img') {
     searchInput.style.visibility = 'hidden';
     searchInput.style.width = '0';
     searchInput.style.padding = '0';
