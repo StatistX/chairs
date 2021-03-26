@@ -1,0 +1,458 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Montserrat";
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+img {
+  padding: 0;
+  margin: 0;
+}
+
+.container {
+  max-width: 1170px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.slider_header {
+  background-image: url("./images/modern-minimalist-interior-with-an-armchair-on-empty-white-wall-3d-rendering.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position-x: right;
+  background-position-y: center;
+}
+
+.slider {
+  height: 800px;
+  max-width: 1366px;
+  margin: 0 auto;
+}
+
+.header {
+  padding-top: 64px;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.header__links {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.header__link {
+  display: flex;
+  justify-content: center;
+  flex-grow: 1;
+  padding: 0 8px;
+  font-size: 14px;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  font-weight: 500;
+  color: #8c8c8c;
+  position: relative;
+  transition: .2s;
+}
+
+a:hover {
+  color: #212121;
+}
+
+.header__link:not(:last-child):hover::after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  background-color: black;
+  bottom: 0;
+  transition: .2s;
+}
+
+.link_img {
+  flex: 0;
+  align-self: baseline;
+}
+
+.search_img {
+  object-fit: contain;
+}
+
+.description {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  justify-content: center;
+  align-items: start;
+}
+
+.title_sm {
+  font-size: 18px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: #43a047;
+}
+
+.title_xl {
+  font-size: 60px;
+  text-transform: uppercase;
+  color: #212121;
+  font-weight: 100;
+}
+
+.description__text {
+  font-size: 14px;
+  font-weight: 300;
+  color: #6c6c6c;
+  padding-bottom: 16px;
+}
+
+.slider__dots {
+  display: flex;
+  justify-content: center;
+  padding-bottom: 24px;
+}
+
+.dot {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  margin: 6px;
+  background-color: darkgrey;
+  transition: .2s;
+}
+
+.dot:hover {
+  background-color: black;
+  transform: scale(1.2);
+}
+
+.products {
+  padding-bottom: 80px;
+}
+
+.products__header {
+  display: flex;
+  justify-content: space-between;
+  padding: 40px 0;
+  align-items: center;
+}
+
+.products__link {
+  font-size: 36px;
+  font-weight: 700;
+  color: #6c6c6c;
+  padding: 0 10px;
+  position: relative;
+}
+
+.products__link::after {
+  content: '';
+  position: absolute;
+  width: 105%;
+  height: 1px;
+  background-color: #6c6c6c;
+  bottom: -10px;
+  left: 0;
+  transition: .2s;
+}
+
+.products__link:hover {
+  color: #212121;
+}
+
+.products__link:hover::after {
+  content: '';
+  position: absolute;
+  width: 105%;
+  height: 2px;
+  background-color: black;
+  bottom: -10px;
+  left: 0;
+  transition: .2s;
+  z-index: 2;
+}
+
+.product__cards {
+  display: flex;
+  justify-content: space-between;
+}
+
+.card_sm {
+  width: 270px;
+  height: 270px;
+  position: relative;
+}
+
+.card__link_img {
+  width: 270px;
+  height: 270px;
+}
+
+.card__link_hover {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: rgba(255, 255, 255, .7);
+  display: none;
+  z-index: 2;
+  padding: 25px;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.card-description {
+  text-align: center;
+  font-size: 14px;
+  font-weight: 300;
+  color: #6c6c6c;
+}
+
+.arrow-link {
+  background-color: white;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.card__title {
+  font-size: 22px;
+  font-weight: 700;
+  color: #212121;
+  padding: 15px 0;
+}
+
+.link_explore {
+  font-size: 18px;
+  line-height: 24px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  color: #212121;
+  position: relative;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 15px 45px 15px 15px;
+  height: 45px;
+  border-radius: 25px;
+  border: none;
+  background-color: white;
+  outline: none;
+  cursor: pointer;
+}
+
+.link_explore::after {
+  content: '';
+  position: absolute;
+  height: 12px;
+  width: 8px;
+  background-image: url('./images/arrow_181.png');
+  background-repeat: no-repeat;
+  background-size: contain;
+  top: 16px;
+  right: 15px;
+}
+
+.detail-products {
+}
+
+.detail-product {
+  display: flex;
+  padding-left: 40px;
+  flex-basis: 50%;
+  height: 683px;
+}
+
+.detail-product_left {
+  background-image: url('images/promo_img1_148.png');
+}
+
+.detail-product_right {
+  background-image: url('images/promo_img_132.png');
+}
+
+.container_xl {
+  display: flex;
+  max-width: 1366px;
+  margin: 0 auto;
+}
+
+.title_blue {
+  color: #1e88e5;
+}
+
+.title_l {
+  font-size: 36px;
+  font-weight: 700;
+  padding: 20px 0;
+}
+
+.cards_l {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.card_l {
+  flex-basis: 30%;
+  padding-bottom: 15px;
+}
+
+.slider_bottom {
+  background-image: url("./images/layers.png");
+} 
+
+.semi-detail-products {
+  padding: 80px 0;
+}
+
+.product__card_xl.left {
+  height: 570px;
+  flex-basis: 570px;
+  background-image: url('./images/product_1_lg_66.png');
+  background-repeat: no-repeat;
+  background-size: contain;
+  display: flex;
+  justify-content: center;
+  padding-left: 40px;
+}
+
+.product__card_xl.right {
+  height: 570px;
+  flex-basis: 570px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-content: space-between;
+}
+
+.container_row {
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.mobile-app {
+  height: 516px;
+  background-image: url('./images/back_img_44.png');
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.title_red {
+  color: #e53935;
+}
+
+.title_gray {
+  color: #6c6c6c;
+}
+
+.description__text_l {
+  font-size: 22px;
+}
+
+.app {
+  width: 135px;
+  height: 40px;
+  cursor: pointer;
+  border: none;
+  background-color: none;
+  outline: none;
+}
+
+.app:first-child {
+  margin-right: 10px;
+}
+
+.footer {
+  background-color: #f7f7f7;
+  padding-top: 80px;
+}
+
+.vertical-column {
+  height: 140px;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+}
+
+.middle-column {
+  display: flex;
+  flex-basis: 35%;
+}
+
+.column__title {
+  font-size: 18px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: #6c6c6c;
+}
+
+.text_sm {
+  font-size: 14px;
+  font-weight: 300;
+  color: #212121;
+}
+
+.two-columns {
+  display: flex;
+  justify-content: space-between;
+}
+
+.column-text p {
+  font-size: 14px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: #212121;
+}
+
+input {
+  width: 370px;
+  height: 48px;
+  border: 1px solid #d9dee1;
+  position: relative;
+  outline: none;
+  padding: 10px;
+  font-family: "Montserrat";
+  font-size: 14px;
+  background-image: url('./images/__19.png');
+  background-repeat: no-repeat;
+  background-size: auto;
+  background-position: 330px 15px;
+
+}
+
+input::placeholder {
+  font-family: "Montserrat";
+  font-size: 14px;
+  font-weight: 300;
+  color: #6c6c6c;
+}
+
+.footer__bottom {
+  display: flex;
+  justify-content: space-between;
+  padding: 40px 0;
+}
