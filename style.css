@@ -332,6 +332,16 @@ a:hover {
 .card_l {
   flex-basis: 30%;
   padding-bottom: 15px;
+  font-size: 0;
+}
+
+.card_l_img {
+  transition: transform 1s ease-in-out;
+  transform-style: preserve-3d;
+}
+
+.card_l_img:hover {
+  /* transform: rotate3d(0,1,0,360deg); */
 }
 
 .slider_bottom {

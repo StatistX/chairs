@@ -19,7 +19,7 @@ const changeBGImage = (block, id) => {
 sliderDots.forEach((el, ind) => {
   el.addEventListener('mouseenter', () => {
     console.log(ind);
-    if (ind < 3 ) changeBGImage(slider, ind);
+    if (ind < 3) changeBGImage(slider, ind);
     else changeBGImage(sliderBottom, ind);
   })
 })
@@ -47,20 +47,11 @@ searchImg.addEventListener('mouseenter', () => {
   searchInput.style.visibility = 'visible';
   searchInput.style.width = '370px';
   searchInput.style.padding = '10px';
-
-  // if (document.activeElement !== searchInput) {
-  //   setTimeout(() => {
-  //     searchInput.style.visibility = 'hidden';
-  //     searchInput.style.width = '0';
-  //     searchInput.style.padding = '0';
-  //     searchInput.value = '';
-  //   }, 3000)
-  // }
 })
 
 document.addEventListener('click', (e) => {
   if (e.target.className !== 'search-input' &&
-      e.target.className !== 'search_img') {
+    e.target.className !== 'search_img') {
     searchInput.style.visibility = 'hidden';
     searchInput.style.width = '0';
     searchInput.style.padding = '0';
@@ -71,3 +62,17 @@ document.addEventListener('click', (e) => {
 
 // ------------------------ //
 
+// Product Cards Rotate //
+
+const cardsImg = document.querySelectorAll('.card_l_img');
+
+cardsImg.forEach(el => {
+  el.addEventListener('mouseenter', () => {
+    el.style.transform = 'rotate3d(0,1,0,180deg)';
+    setTimeout(() => {
+      el.style.transform = ''
+    }, 1000)
+  })
+});
+
+// ------------------------ //
