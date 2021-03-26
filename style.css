@@ -67,6 +67,20 @@ img {
   transition: .2s;
 }
 
+.search-input {
+  box-sizing: border-box;
+  position: absolute;
+  background-image: none;
+  top: 32px;
+  left: -330px;
+  width: 0;
+  padding: 0;
+  border-radius: 10px;
+  border: none;
+  visibility: hidden;
+  transition: width 0.4s, padding 0.4s ease-in-out;
+}
+
 a:hover {
   color: #212121;
 }

@@ -38,4 +38,35 @@ smallCards.forEach((el, id) => {
 
 })
 
+// Search input in HEADER //
+
+const searchImg = document.querySelector('.search_img');
+const searchInput = document.querySelector('.search-input');
+
+searchImg.addEventListener('mouseenter', () => {
+  searchInput.style.visibility = 'visible';
+  searchInput.style.width = '370px';
+  searchInput.style.padding = '10px';
+
+  // if (document.activeElement !== searchInput) {
+  //   setTimeout(() => {
+  //     searchInput.style.visibility = 'hidden';
+  //     searchInput.style.width = '0';
+  //     searchInput.style.padding = '0';
+  //     searchInput.value = '';
+  //   }, 3000)
+  // }
+})
+
+document.addEventListener('click', (e) => {
+  if (e.target.className !== 'search-input') {
+    searchInput.style.visibility = 'hidden';
+    searchInput.style.width = '0';
+    searchInput.style.padding = '0';
+    searchInput.value = '';
+  }
+})
+
+
+// ------------------------ //
 
