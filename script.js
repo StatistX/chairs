@@ -93,3 +93,28 @@ cardsImg.forEach(el => {
 });
 
 // ------------------------ //
+
+// Contacts shrink //
+
+const contactsBtn = document.querySelectorAll('.header__link')[4];
+const contactsBlock = document.querySelector('.contacts');
+
+contactsBtn.addEventListener('click', () => {
+  contactsBlock.style.display = 'block';
+  contactsBlock.classList.add('shrink');
+})
+
+document.addEventListener('click', (e) => {
+  console.log(e.target.classList)
+  if (e.target.className !== 'contacts__content' &&
+    e.target.className !== 'contacts__title' &&
+    e.target.className !== 'contacts__place' &&
+
+    e.target.className !== 'header__link' &&
+    contactsBlock.style.display === 'block') {
+    contactsBlock.style.display = 'none';
+  }
+
+})
+
+// ------------------------ //
